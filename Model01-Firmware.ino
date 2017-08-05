@@ -1,3 +1,4 @@
+
 // -*- mode: c++ -*-
 // Copyright 2016 Keyboardio, inc. <jesse@keyboard.io>
 // See "LICENSE" for license details
@@ -109,19 +110,19 @@ ___ \
 \
     Macro_Any,     Key_6, Key_7, Key_8,     Key_9,      Key_0,         Key_ToggleNumlock, \
     Key_Enter,     Key_F, Key_G, Key_C,     Key_R,      Key_L,         Key_Slash,       \
-                   Key_D, Key_H, Key_T,     Key_N,      Key_S,         Key_Minus,       \
+                   Key_D, Key_H, Key_T,     Key_N,      Key_S,         Key_RightShift,       \
     Key_RightAlt,  Key_B, Key_M, Key_W,     Key_V,      Key_Z,         Key_RightShift,       \
     Key_End, Key_Enter, Key_Spacebar, Key_RightControl,                   \
     Key_Keymap1_Momentary \
 )
 
-const Key keymaps[][ROWS][COLS] PROGMEM = {
+const Key OriginalKeymaps[][ROWS][COLS] PROGMEM = {
   QWERTY,
   GENERIC_FN2,
   NUMPAD
 };
 
-const Key DvorakKeyMaps[][ROWS][COLS] PROGMEM = {
+const Key keymaps[][ROWS][COLS] PROGMEM = {
   DVORAK,
   GENERIC_DVORAK_FN2,
   NUMPAD
