@@ -104,7 +104,7 @@ ___ \
     Key_Backtick,  Key_Quote, Key_Comma, Key_Period, Key_P, Key_Y, Key_Tab,           \
     Key_LeftShift, Key_A, Key_O, Key_E, Key_U, Key_I,                    \
     Key_LeftAlt,   Key_Semicolon, Key_Q, Key_J, Key_K, Key_X, Key_Escape,        \
-            Key_LeftControl, Key_Backspace, Key_Gui, Key_Home,         \
+            Key_LeftControl, Key_Backspace, Key_LeftGui, Key_Home,         \
                           Key_Keymap1_Momentary,     \
 \
     Macro_Any,     Key_6, Key_7, Key_8,     Key_9,      Key_0,         Key_ToggleNumlock, \
@@ -121,7 +121,7 @@ const Key keymaps[][ROWS][COLS] PROGMEM = {
   NUMPAD
 };
 
-const DvorakKey keymaps[][ROWS][COLS] PROGMEM = {
+const Key DvorakKeyMaps[][ROWS][COLS] PROGMEM = {
   DVORAK,
   GENERIC_DVORAK_FN2,
   NUMPAD
