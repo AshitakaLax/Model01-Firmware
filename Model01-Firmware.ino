@@ -32,35 +32,18 @@
 #define Macro_Any M(MACRO_ANY)
 #define NUMPAD_KEYMAP 2
 
-#define GENERIC_FN2  KEYMAP_STACKED ( \
-___,      Key_F1,           Key_F2,      Key_F3,     Key_F4,        Key_F5,           XXX,         \
-Key_Tab,  ___,              Key_mouseUp, ___,        Key_mouseBtnR, Key_mouseWarpEnd, Key_mouseWarpNE, \
-Key_Home, Key_mouseL,       Key_mouseDn, Key_mouseR, Key_mouseBtnL, Key_mouseWarpNW,                   \
-Key_End,  Key_PrintScreen,  Key_Insert,  ___,        Key_mouseBtnM, Key_mouseWarpSW,  Key_mouseWarpSE, \
-                                            Key_LeftControl, Key_Delete, Key_LeftGui, Key_LeftShift,  \
-                                                                ___,   \
-\
-Consumer_ScanPreviousTrack, Key_F6,                 Key_F7,                   Key_F8,                  Key_F9,          Key_F10,          Key_F11, \
-Consumer_PlaySlashPause,    Consumer_ScanNextTrack, Key_LeftCurlyBracket,     Key_RightCurlyBracket,   Key_LeftBracket, Key_RightBracket, Key_F12, \
-                            Key_LeftArrow,          Key_DownArrow,            Key_UpArrow,             Key_RightArrow,  ___,              ___, \
-Key_Menu,                   Consumer_Mute,          Consumer_VolumeDecrement, Consumer_VolumeIncrement, ___,            Key_Backslash,    Key_Pipe, \
-Key_RightShift, Key_RightAlt, Key_Enter, Key_RightControl, \
-___ \
-)
-
-
 #define GENERIC_DVORAK_FN2  KEYMAP_STACKED ( \
-___,      Key_F1,           Key_F2,      Key_F3,     Key_F4,        Key_F5,           XXX,         \
-Key_Tab,  ___,              Key_mouseUp, ___,        Key_mouseBtnR, Key_mouseWarpEnd, Key_mouseWarpNE, \
+___,      Key_F1,           Key_F2,      Key_F3,        Key_F4,           Key_F5,             XXX,         \
+Key_Tab,     ___,      Key_mouseUp,         ___, Key_mouseBtnR, Key_mouseWarpEnd, Key_mouseWarpNE, \
 Key_LeftShift, Key_mouseL,       Key_mouseDn, Key_mouseR, Key_mouseBtnL, Key_mouseWarpNW,                   \
 Key_LeftAlt,  Key_PrintScreen,  Key_Insert,  ___,        Key_mouseBtnM, Key_mouseWarpSW,  Key_mouseWarpSE, \
             Key_LeftControl, Key_Delete, Key_LeftGui, Key_PageUp,  \
                                                                 ___,   \
 \
-Consumer_ScanPreviousTrack, Key_F6,                 Key_F7,                   Key_F8,                  Key_F9,          Key_F10,          Key_F11, \
-Consumer_PlaySlashPause,    Consumer_ScanNextTrack, Key_LeftCurlyBracket,     Key_RightCurlyBracket,   Key_LeftBracket, Key_RightBracket, Key_F12, \
-                            Key_LeftArrow,          Key_DownArrow,            Key_UpArrow,             Key_RightArrow,  ___,              Key_Pipe, \
-Key_Menu,                   Consumer_Mute,          Consumer_VolumeDecrement, Consumer_VolumeIncrement, ___,            Key_Backslash,    Key_RightShift, \
+Consumer_ScanPreviousTrack,                 Key_F6,                   Key_F7,                    Key_F8,           Key_F9,          Key_F10,          Key_F11, \
+Key_Backslash,              Consumer_ScanNextTrack,     Key_LeftCurlyBracket,     Key_RightCurlyBracket,  Key_LeftBracket, Key_RightBracket,          Key_F12, \
+                                     Key_LeftArrow,            Key_DownArrow,               Key_UpArrow,   Key_RightArrow,              ___,         Key_Pipe, \
+Key_Menu,                            Consumer_Mute, Consumer_VolumeDecrement,  Consumer_VolumeIncrement,              ___,    Key_Backslash,   Key_RightShift, \
 Key_PageDown, Key_Enter, Key_Spacebar, Key_RightControl, \
 ___ \
 )
@@ -84,43 +67,21 @@ ___ \
     Key_Keymap1_Momentary \
 )
 
-#define QWERTY KEYMAP_STACKED ( \
-    ___,          Key_1, Key_2, Key_3, Key_4, Key_5, Key_LEDEffectNext, \
-    Key_Backtick, Key_Q, Key_W, Key_E, Key_R, Key_T, Key_Tab,           \
-    Key_PageUp,   Key_A, Key_S, Key_D, Key_F, Key_G,                    \
-    Key_PageDown, Key_Z, Key_X, Key_C, Key_V, Key_B, Key_Escape,        \
-    Key_LeftControl, Key_Backspace, Key_LeftGui, Key_LeftShift,         \
-                          Key_Keymap1_Momentary,     \
-\
-    Macro_Any,       Key_6, Key_7, Key_8,     Key_9,      Key_0,         Key_ToggleNumlock, \
-    Key_Enter,     Key_Y, Key_U, Key_I,     Key_O,      Key_P,         Key_Equals,       \
-                   Key_H, Key_J, Key_K,     Key_L,      Key_Semicolon, Key_Quote,       \
-    Key_RightAlt,  Key_N, Key_M, Key_Comma, Key_Period, Key_Slash,     Key_Minus,       \
-    Key_RightShift, Key_LeftAlt, Key_Spacebar, Key_RightControl,                   \
-    Key_Keymap1_Momentary \
-)
-
 #define DVORAK KEYMAP_STACKED ( \
-    ___,           Key_1, Key_2, Key_3, Key_4, Key_5, Key_LEDEffectNext, \
-    Key_Backtick,  Key_Quote, Key_Comma, Key_Period, Key_P, Key_Y, Key_Tab,           \
-    Key_LeftShift, Key_A, Key_O, Key_E, Key_U, Key_I,                    \
-    Key_LeftAlt,   Key_Semicolon, Key_Q, Key_J, Key_K, Key_X, Key_Escape,        \
-            Key_LeftControl, Key_Backspace, Key_LeftGui, Key_Home,         \
+    ___,           Key_1,         Key_2,     Key_3,        Key_4, Key_5, Key_LEDEffectNext, \
+    Key_Tab,       Key_Semicolon, Key_Comma, Key_Period,   Key_P, Key_Y, Key_Backtick,      \
+    Key_LeftAlt,   Key_A,         Key_O,     Key_E,        Key_U, Key_I,                    \
+    Key_LeftShift, Key_Quote,     Key_Q,     Key_J,        Key_K, Key_X, Key_Escape,        \
+            Key_LeftControl, Key_Backspace, Key_Delete, Key_Home,         \
                           Key_Keymap1_Momentary,     \
 \
     Macro_Any,     Key_6, Key_7, Key_8,     Key_9,      Key_0,         Key_ToggleNumlock, \
-    Key_Enter,     Key_F, Key_G, Key_C,     Key_R,      Key_L,         Key_Slash,       \
-                   Key_D, Key_H, Key_T,     Key_N,      Key_S,         Key_RightShift,       \
+    Key_Slash,     Key_F, Key_G, Key_C,     Key_R,      Key_L,         Key_Equals,       \
+                   Key_D, Key_H, Key_T,     Key_N,      Key_S,         Key_Minus,       \
     Key_RightAlt,  Key_B, Key_M, Key_W,     Key_V,      Key_Z,         Key_RightShift,       \
-    Key_End, Key_Enter, Key_Spacebar, Key_RightControl,                   \
+            Key_End, Key_Enter, Key_Spacebar, Key_RightControl,                   \
     Key_Keymap1_Momentary \
 )
-
-const Key OriginalKeymaps[][ROWS][COLS] PROGMEM = {
-  QWERTY,
-  GENERIC_FN2,
-  NUMPAD
-};
 
 const Key keymaps[][ROWS][COLS] PROGMEM = {
   DVORAK,
@@ -129,11 +90,6 @@ const Key keymaps[][ROWS][COLS] PROGMEM = {
 };
 
 static LEDSolidColor solidRed(160, 0, 0);
-static LEDSolidColor solidOrange(140, 70, 0);
-static LEDSolidColor solidYellow(130, 100, 0);
-static LEDSolidColor solidGreen(0, 160, 0);
-static LEDSolidColor solidBlue(0, 70, 130);
-static LEDSolidColor solidIndigo(0, 0, 170);
 static LEDSolidColor solidViolet(130, 0, 120);
 
 const macro_t *macroAction(uint8_t macroIndex, uint8_t keyState) {
@@ -159,13 +115,12 @@ void setup() {
   Kaleidoscope.use(&TestMode,
                    &LEDControl, &LEDOff,
                    &LEDRainbowEffect, &LEDRainbowWaveEffect, &LEDChaseEffect,
-                   &solidRed, &solidOrange, &solidYellow, &solidGreen, &solidBlue, &solidIndigo, &solidViolet,
+                   &solidRed, &solidViolet,
                    &LEDBreatheEffect,
                    &AlphaSquareEffect,
                    &StalkerEffect,
-				   &HeatmapEffect,
+				           &HeatmapEffect,
                    &NumLock,
-
                    &Macros,
                    &MouseKeys,
                    NULL);
