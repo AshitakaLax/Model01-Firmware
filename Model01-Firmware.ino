@@ -37,13 +37,13 @@ ___,      Key_F1,           Key_F2,      Key_F3,        Key_F4,           Key_F5
 Key_Tab,     ___,      Key_mouseUp,         ___, Key_mouseBtnR, Key_mouseWarpEnd, Key_mouseWarpNE, \
 Key_LeftShift, Key_mouseL,       Key_mouseDn, Key_mouseR, Key_mouseBtnL, Key_mouseWarpNW,                   \
 Key_LeftAlt,  Key_PrintScreen,  Key_Insert,  ___,        Key_mouseBtnM, Key_mouseWarpSW,  Key_mouseWarpSE, \
-            Key_LeftControl, Key_Delete, Key_LeftGui, Key_PageUp,  \
+            Key_LeftControl, Key_Backspace, Key_Delete, Key_PageUp,  \
                                                                 ___,   \
 \
 Consumer_ScanPreviousTrack,                 Key_F6,                   Key_F7,                    Key_F8,           Key_F9,          Key_F10,          Key_F11, \
 Key_Backslash,              Consumer_ScanNextTrack,     Key_LeftCurlyBracket,     Key_RightCurlyBracket,  Key_LeftBracket, Key_RightBracket,          Key_F12, \
                                      Key_LeftArrow,            Key_DownArrow,               Key_UpArrow,   Key_RightArrow,              ___,         Key_Pipe, \
-Key_Menu,                            Consumer_Mute, Consumer_VolumeDecrement,  Consumer_VolumeIncrement,              ___,    Key_Backslash,   Key_RightShift, \
+Key_RightGui,                             Key_Menu, Consumer_VolumeDecrement,  Consumer_VolumeIncrement,              ___,    Key_Backslash,   Key_RightShift, \
 Key_PageDown, Key_Enter, Key_Spacebar, Key_RightControl, \
 ___ \
 )
@@ -78,7 +78,7 @@ ___ \
     Macro_Any,     Key_6, Key_7, Key_8,     Key_9,      Key_0,         Key_ToggleNumlock, \
     Key_Slash,     Key_F, Key_G, Key_C,     Key_R,      Key_L,         Key_Equals,       \
                    Key_D, Key_H, Key_T,     Key_N,      Key_S,         Key_Minus,       \
-    Key_RightAlt,  Key_B, Key_M, Key_W,     Key_V,      Key_Z,         Key_RightShift,       \
+    Key_RightGui,  Key_B, Key_M, Key_W,     Key_V,      Key_Z,         Key_RightShift,       \
             Key_End, Key_Enter, Key_Spacebar, Key_RightControl,                   \
     Key_Keymap1_Momentary \
 )
