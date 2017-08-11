@@ -34,17 +34,17 @@
 
 #define GENERIC_DVORAK_FN2  KEYMAP_STACKED ( \
 ___,      Key_F1,           Key_F2,      Key_F3,        Key_F4,           Key_F5,             XXX,         \
-Key_Tab,     ___,      Key_mouseUp,         ___, Key_mouseBtnR, Key_mouseWarpEnd, Key_mouseWarpNE, \
-Key_LeftAlt, Key_mouseL,       Key_mouseDn, Key_mouseR, Key_mouseBtnL, Key_mouseWarpNW,                   \
-Key_LeftShift,  Key_PrintScreen,  Key_Insert,  ___,        Key_mouseBtnM, Key_mouseWarpSW,  Key_mouseWarpSE, \
-            Key_LeftControl, Key_Backspace, Key_Delete, Key_PageUp,  \
+___,     ___,      Key_mouseUp,         ___, Key_mouseBtnR, Key_mouseWarpEnd, Key_mouseWarpNE, \
+___, Key_mouseL,       Key_mouseDn, Key_mouseR, Key_mouseBtnL, Key_mouseWarpNW,                   \
+___,  Key_PrintScreen,  Key_Insert,  ___,        Key_mouseBtnM, Key_mouseWarpSW,  ___, \
+            Key_LeftControl, ___, ___, ___,  \
                                                                 ___,   \
 \
 Consumer_ScanPreviousTrack,                 Key_F6,                   Key_F7,                    Key_F8,           Key_F9,          Key_F10,          Key_F11, \
 Key_Backslash,              Consumer_ScanNextTrack,     Key_LeftCurlyBracket,     Key_RightCurlyBracket,  Key_LeftBracket, Key_RightBracket,          Key_F12, \
                                      Key_LeftArrow,            Key_DownArrow,               Key_UpArrow,   Key_RightArrow,              ___,         Key_Pipe, \
-Key_RightGui,                             Key_Menu, Consumer_VolumeDecrement,  Consumer_VolumeIncrement,              ___,    Key_Backslash,   Key_RightShift, \
-Key_PageDown, Key_Enter, Key_Spacebar, Key_RightControl, \
+___,                             Key_Menu, Consumer_VolumeDecrement,  Consumer_VolumeIncrement,              ___,    Key_Backslash,   Key_RightShift, \
+___, ___, ___,  ___, \
 ___ \
 )
 
