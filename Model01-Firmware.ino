@@ -17,6 +17,7 @@
 #include "Kaleidoscope.h"
 
 #include "LED-Off.h"
+#include "Kaleidoscope-LEDEffect-BootGreeting.h"
 #include "Kaleidoscope-LEDEffect-SolidColor.h"
 #include "Kaleidoscope-LEDEffect-Breathe.h"
 #include "Kaleidoscope-LEDEffect-Chase.h"
@@ -43,7 +44,7 @@ ___,  Key_PrintScreen,  Key_Insert,  ___,        Key_mouseBtnM, Key_mouseWarpSW,
 Consumer_ScanPreviousTrack,                 Key_F6,                   Key_F7,                    Key_F8,           Key_F9,          Key_F10,          Key_F11, \
 Key_Backslash,              Consumer_ScanNextTrack,     Key_LeftCurlyBracket,     Key_RightCurlyBracket,  Key_LeftBracket, Key_RightBracket,          Key_F12, \
                                      Key_LeftArrow,            Key_DownArrow,               Key_UpArrow,   Key_RightArrow,              ___,         Key_Pipe, \
-___,                             Key_Menu, Consumer_VolumeDecrement,  Consumer_VolumeIncrement,              ___,    Key_Backslash,   Key_RightShift, \
+___,                             Key_Mute, Consumer_VolumeDecrement,  Consumer_VolumeIncrement,              ___,    Key_Backslash,   Key_RightShift, \
 ___, ___, ___,  ___, \
 ___ \
 )
@@ -89,8 +90,8 @@ const Key keymaps[][ROWS][COLS] PROGMEM = {
   NUMPAD
 };
 
-static LEDSolidColor solidRed(160, 0, 0);
-static LEDSolidColor solidViolet(130, 0, 120);
+static kaleidoscope::LEDSolidColor solidRed(160, 0, 0);
+static kaleidoscope::LEDSolidColor solidViolet(130, 0, 120);
 
 const macro_t *macroAction(uint8_t macroIndex, uint8_t keyState) {
   if (macroIndex == TOGGLENUMLOCK && keyToggledOn(keyState)) {
@@ -112,7 +113,7 @@ const macro_t *macroAction(uint8_t macroIndex, uint8_t keyState) {
 void setup() {
   Kaleidoscope.setup(KEYMAP_SIZE);
   BootKeyboard.begin();
-  Kaleidoscope.use(&TestMode,
+  Kaleidoscope.use(&BootGreetingEffect,
                    &LEDControl, &LEDOff,
                    &LEDRainbowEffect, &LEDRainbowWaveEffect, &LEDChaseEffect,
                    &solidRed, &solidViolet,
