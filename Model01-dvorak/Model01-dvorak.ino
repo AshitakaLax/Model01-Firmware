@@ -275,13 +275,13 @@ const macro_t *macroAction(uint8_t macroIndex, uint8_t keyState) {
 // Keyboardio Model 01.
 
 
-static kaleidoscope::LEDSolidColor solidRed(160, 0, 0);
-static kaleidoscope::LEDSolidColor solidOrange(140, 70, 0);
-static kaleidoscope::LEDSolidColor solidYellow(130, 100, 0);
-static kaleidoscope::LEDSolidColor solidGreen(0, 160, 0);
-static kaleidoscope::LEDSolidColor solidBlue(0, 70, 130);
-static kaleidoscope::LEDSolidColor solidIndigo(0, 0, 170);
-static kaleidoscope::LEDSolidColor solidViolet(130, 0, 120);
+//static kaleidoscope::LEDSolidColor solidRed(160, 0, 0);
+//static kaleidoscope::LEDSolidColor solidOrange(140, 70, 0);
+//static kaleidoscope::LEDSolidColor solidYellow(130, 100, 0);
+//static kaleidoscope::LEDSolidColor solidGreen(0, 160, 0);
+//static kaleidoscope::LEDSolidColor solidBlue(0, 70, 130);
+//static kaleidoscope::LEDSolidColor solidIndigo(0, 0, 170);
+//static kaleidoscope::LEDSolidColor solidViolet(130, 0, 120);
 
 
 
@@ -309,6 +309,9 @@ void setup() {
 
     // We start with the LED effect that turns off all the LEDs.
     &LEDOff,
+    
+    // The stalker effect lights up the keys you've pressed recently
+    &StalkerEffect,
 
     // The rainbow effect changes the color of all of the keyboard's keys at the same time
     // running through all the colors of the rainbow.
@@ -323,27 +326,24 @@ void setup() {
     &LEDChaseEffect,
 
     // These static effects turn your keyboard's LEDs a variety of colors
-    &solidRed, &solidOrange, &solidYellow, &solidGreen, &solidBlue, &solidIndigo, &solidViolet,
+    // &solidRed, &solidOrange, &solidYellow, &solidGreen, &solidBlue, &solidIndigo, &solidViolet,
 
     // The breathe effect slowly pulses all of the LEDs on your keyboard
-    &LEDBreatheEffect,
+    //&LEDBreatheEffect,
 
     // The AlphaSquare effect prints each character you type, using your
     // keyboard's LEDs as a display
-    &AlphaSquareEffect,
-
-    // The stalker effect lights up the keys you've pressed recently
-    &StalkerEffect,
+    //&AlphaSquareEffect,
 
     // The numpad plugin is responsible for lighting up the 'numpad' mode
     // with a custom LED effect
     &NumPad,
 
     // The macros plugin adds support for macros
-    &Macros,
+    &Macros
 
     // The runtime macro support
-    &MacrosOnTheFly
+    // &MacrosOnTheFly
     // The MouseKeys plugin lets you add keys to your keymap which move the mouse.
 //    &MouseKeys
   );
