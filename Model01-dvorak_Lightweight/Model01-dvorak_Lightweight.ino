@@ -16,14 +16,11 @@
 // The Kaleidoscope core
 #include "Kaleidoscope.h"
 
-// Support for keys that move the mouse
-//#include "Kaleidoscope-MouseKeys.h"
-
 // Support for macros
 #include "Kaleidoscope-Macros.h"
 
 // Dynamic runtime macros
-//#include <Kaleidoscope-MacrosOnTheFly.h>
+#include <Kaleidoscope-MacrosOnTheFly.h>
 
 // Support for controlling the keyboard's LEDs
 #include "Kaleidoscope-LEDControl.h"
@@ -33,10 +30,6 @@
 
 // Support for an "LED off mode"
 #include "LED-Off.h"
-
-// Support for the "Boot greeting" effect, which pulses the 'LED' button for 10s
-// when the keyboard is connected to a computer (or that computer is powered on)
-// #include "Kaleidoscope-LEDEffect-BootGreeting.h"
 
 // Support for LED modes that set all LEDs to a single color
 #include "Kaleidoscope-LEDEffect-SolidColor.h"
@@ -135,9 +128,9 @@ const Key keymaps[][ROWS][COLS] PROGMEM = {
 
  [DVORAK] = KEYMAP_STACKED
   (___,             Key_1,         Key_2,     Key_3,      Key_4, Key_5, Key_MacroRec,
-   Key_Tab,         Key_Semicolon, Key_Comma, Key_Period, Key_P, Key_Y, Key_Backtick,
+   Key_Tab,         Key_Quote, Key_Comma, Key_Period, Key_P, Key_Y, Key_Backtick,
    Key_LeftAlt,     Key_A,         Key_O,     Key_E,      Key_U, Key_I,
-   Key_LeftShift,   Key_Quote,     Key_Q,     Key_J,      Key_K, Key_X, Key_Escape,
+   Key_LeftShift,   Key_Semicolon,     Key_Q,     Key_J,      Key_K, Key_X, Key_Escape,
    Key_LeftControl, Key_Backspace, Key_Delete, Key_Home,
    ShiftToLayer(FUNCTION),
 
@@ -198,7 +191,10 @@ static void versionInfoMacro(uint8_t keyState) {
 
 static void workLogin(uint8_t keyState) {
   if (keyToggledOn(keyState)) {
-    Macros.type(PSTR("admin\tAdministr@t0r"));
+    Macros.type(PSTR("admin"));
+    Macros.type(PSTR("\t"));
+    Macros.type(PSTR("Administr@t0r"));
+    
   }
 }
 
