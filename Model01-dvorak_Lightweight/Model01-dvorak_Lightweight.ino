@@ -28,9 +28,6 @@
 // Support for "Numpad" mode, which is mostly just the Numpad specific LED mode
 #include "Kaleidoscope-NumPad.h"
 
-// Support for an "LED off mode"
-#include "LED-Off.h"
-
 // Support for LED modes that set all LEDs to a single color
 #include "Kaleidoscope-LEDEffect-SolidColor.h"
 
@@ -75,7 +72,7 @@ enum { MACRO_VERSION_INFO,
 
 
 
-/** The Model 01's key layouts are defined as 'keymaps'. By default, there are three
+/** The Model 01's key `layouts are defined as 'keymaps'. By default, there are three
   * keymaps: The standard QWERTY keymap, the "Function layer" keymap and the "Numpad"
   * keymap.
   *
@@ -111,7 +108,7 @@ enum { MACRO_VERSION_INFO,
 
 /**
   * Layers are "0-indexed" -- That is the first one is layer 0. The second one is layer 1.
-  * The third one is layer 2.
+  * The third one is l`ayer 2.
   * This 'enum' lets us use names like QWERTY, FUNCTION, and NUMPAD in place of
   * the numbers 0, 1 and 2.
   *
@@ -294,11 +291,6 @@ void setup() {
   // The order can be important. For example, LED effects are
   // added in the order they're listed here.
   Kaleidoscope.use(
-    // The boot greeting effect pulses the LED button for 10 seconds after the keyboard is first connected
-//    &BootGreetingEffect,
-
-    // The hardware test mode, which can be invoked by tapping Prog, LED and the left Fn button at the same time.
-//    &TestMode,
 
     // LEDControl provides support for other LED modes
     &LEDControl,
@@ -321,27 +313,12 @@ void setup() {
     // your keyboard. Spoiler: the blue pixel never catches the red pixel
     &LEDChaseEffect,
 
-    // These static effects turn your keyboard's LEDs a variety of colors
-    // &solidRed, &solidOrange, &solidYellow, &solidGreen, &solidBlue, &solidIndigo, &solidViolet,
-
-    // The breathe effect slowly pulses all of the LEDs on your keyboard
-    //&LEDBreatheEffect,
-
-    // The AlphaSquare effect prints each character you type, using your
-    // keyboard's LEDs as a display
-    //&AlphaSquareEffect,
-
     // The numpad plugin is responsible for lighting up the 'numpad' mode
     // with a custom LED effect
     &NumPad,
 
     // The macros plugin adds support for macros
     &Macros
-
-    // The runtime macro support
-    // &MacrosOnTheFly
-    // The MouseKeys plugin lets you add keys to your keymap which move the mouse.
-//    &MouseKeys
   );
 
   // While we hope to improve this in the future, the NumPad plugin
@@ -360,11 +337,6 @@ void setup() {
   // called 'BlazingTrail'. For details on other options,
   // see https://github.com/keyboardio/Kaleidoscope-LED-Stalker
   StalkerEffect.variant = STALKER(BlazingTrail);
-
-  // We want to make sure that the firmware starts with LED effects off
-  // This avoids over-taxing devices that don't have a lot of power to share
-  // with USB devices
-  LEDOff.activate();
 }
 
 /** loop is the second of the standard Arduino sketch functions.
